@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f5faf8;
+  font-family: "poppins";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 0;
+}
+/* Side Section */
+.side-bar {
+  position: sticky;
+  max-height: 100vh;
+  width: 30%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.side-top-section h4 {
+  font-size: 20px;
+  line-height: 2px;
+}
+.side-top-section p {
+  font-size: 14px;
+}
+.side-mid-section {
+  line-height: 10px;
+  margin: 1rem 0;
+}
+.side-bottom-section button {
+  width: 200px;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  background-color: #59ca56;
+  border: 0;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.side-bottom-section button:hover {
+  background-color: #50b64c;
+}
+/* End of Side Section */
+.main-container {
+  display: block;
+  width: 60%;
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-bottom: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.01);
+}
+.card-image {
+  width: 40%;
+  position: relative;
+}
+.card-image img {
+  width: 100%;
+}
+.img-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #59ca56;
+  color: #fff;
+  font-size: 12px;
+  min-width: 40px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+.card-content {
+  margin-left: 10px;
+  width: 50%;
+  padding: 10px;
+}
+.card-content p {
+  font-size: 10px;
+}
+.content-upper h4 {
+  line-height: 2px;
+  color: #59ca56;
+}
+.content-upper p {
+  font-size: 14px;
+}
+.content-lower {
+  margin-top: 40px;
+  line-height: 5px;
+  position: relative;
+}
+.content-lower h3 {
+  color: #59ca56;
+}
+.content-lower span {
+  position: absolute;
+  bottom: 0;
+  right: 90px;
+}
+@media (max-width: 994px) {
+  .main-container,
+  .side-bar {
+    width: 100%;
+  }
+  .side-bar {
+    position: relative;
+    justify-content: space-evenly;
+  }
+  .side-mid-section, .side-top-section, .side-bottom-section {
+    margin: 2rem 0;
+  }
+  .card-image {
+    width: 100%;
+  }
+  .card-content {
+    width: 100%;
+  }
+  .content-lower span {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
 }
